@@ -7,25 +7,20 @@ create_file:
   image: alpine
   stage: build
   script:
-    - mkdir project
+    - mkdir build
     - echo "Creation des fichiers"
   artifacts:
     paths:
-      - project
+      - build\
 testing_file:
   image: alpine
   stage: test
   script:
     - echo "Tester les fichiers"
-  artifacts:
-    paths:
-      - project
   
 deploy_file:
   image: alpine
   stage: deploy
   script:
     - echo "Déploiement des fichiers"
-  artifacts:
-    paths:
-      - project
+
